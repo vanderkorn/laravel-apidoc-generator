@@ -14,7 +14,7 @@ class DingoGenerator extends AbstractGenerator
      *
      * @return array
      */
-    public function processRoute($route, $bindings = [], $headers = [], $withResponse = true)
+    public function processRoute($i, $route, $bindings = [], $headers = [], $withResponse = true)
     {
         $response = '';
 

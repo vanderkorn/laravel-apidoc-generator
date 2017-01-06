@@ -28,7 +28,7 @@ class LaravelGenerator extends AbstractGenerator
      *
      * @return array
      */
-    public function processRoute($route, $bindings = [], $headers = [], $withResponse = true)
+    public function processRoute($i, $route, $bindings = [], $headers = [], $withResponse = true)
     {
         $content = '';
 
@@ -48,7 +48,7 @@ class LaravelGenerator extends AbstractGenerator
         return $this->getParameters([
             'id' => md5($route->getUri().':'.implode($route->getMethods())),
             'resource' => $routeGroup,
-            'title' => $routeDescription['short'],
+            'title' => $i. " - " . $routeDescription['short'],
             'description' => $routeDescription['long'],
             'methods' => $route->getMethods(),
             'uri' => $route->getUri(),
